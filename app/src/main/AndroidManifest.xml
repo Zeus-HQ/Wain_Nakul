@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.yasse.wain_nakul">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="وين ناكل؟"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDGSZSsO3gacnefx39IfIH7vsido2OESjA" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.activities.Splash_Screen_Activity"
+            android:noHistory="true"
+            android:theme="@style/SplashScreenTheme"
+            android:label="وين ناكل؟">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.Start_Suggestions"
+            android:theme="@style/SuggestionScreenTheme"
+            android:label="وين ناكل؟"/>
+
+        <activity
+            android:name=".ui.activities.Mapped_Suggestion"
+            android:label="وين ناكل؟" />
+
+        <activity android:name=".ui.activities.Restaurant_Images"
+            android:label="وين ناكل؟"/>
+    </application>
+
+</manifest>

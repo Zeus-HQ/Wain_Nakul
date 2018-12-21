@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">وين ناكل؟</string>
+    <string name="wain_nakul">وين ناكل؟</string>
+    <string name="suggest">Suggest</string>
+    <string name="title_activity_mapped__sugesstion">وين ناكل؟</string>
+    <string name="google_maps_api_key">AIzaSyDGSZSsO3gacnefx39IfIH7vsido2OESjA</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="69dp"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:text="@string/wain_nakul"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_below="@id/headerLayout"
+        android:background="@color/transparentWhite">
+
+        <TextView
+            android:id="@+id/restaurantName"
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:text="Restaurant Name"
+            android:textAlignment="center"
+            android:textColor="@color/dusty_teal"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/restaurantCategoryAndRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="Restaurant Category - Rating "
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/open_in_google_button"
+        android:layout_width="222dp"
+        android:layout_height="42dp"
+        android:layout_above="@id/show_pictures_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg_transparent"
+        android:backgroundTint="@color/white"
+        android:text="فتح في Google Maps"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/show_pictures_button"
+        android:layout_width="222dp"
+        android:layout_height="42dp"
+        android:layout_above="@id/another_suggestion_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_bg_transparent"
+        android:backgroundTint="@color/white"
+        android:text="عرض الصور"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/another_suggestion_button"
+        android:layout_width="222dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_bg_transparent"
+        android:text="اقتراح آخر"
+        android:textColor="@color/white" />
+
+    <com.example.yasse.wain_nakul.ui.classes.HorizontalDotsProgress
+        android:id="@+id/mappedProgressDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/another_suggestion_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_bg_transparent"
+        android:visibility="gone" />
+
+</RelativeLayout>
